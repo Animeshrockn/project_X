@@ -5,7 +5,7 @@ import { AnimeshHomeComponent } from './components/animesh-home/animesh-home.com
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AnimeshHeaderComponent, AnimeshHomeComponent],
+  imports: [RouterOutlet, AnimeshHeaderComponent, AnimeshHomeComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
