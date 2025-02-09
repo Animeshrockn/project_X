@@ -36,7 +36,7 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## Running unit tests for Front-end
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
@@ -53,6 +53,18 @@ ng e2e
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Running Unit Tests for Backend (Python)
+
+For testing the Python backend, we recommend using **`unittest`** (Python's built-in testing framework) or **`pytest`** (a popular third-party testing framework). Below are instructions for running unit tests using both frameworks.
+
+### Using `unittest`
+
+To run the unit tests in your backend, navigate to the root of your Python project and execute the following command:
+
+```bash
+python -m unittest discover -s tests
+
 
 ## Additional Resources
 
