@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { sign } from 'node:crypto';
 
 @Component({
   selector: 'app-animesh-header',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './animesh-header.component.css'
 })
 export class AnimeshHeaderComponent {
-
+  title = signal("Project X")
 }
