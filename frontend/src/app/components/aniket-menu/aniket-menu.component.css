@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: #6969;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    text-align: center;
+}
