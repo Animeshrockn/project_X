@@ -4,10 +4,11 @@ import { AnimeshHeaderComponent } from './components/animesh-header/animesh-head
 import { AnimeshHomeComponent } from './components/animesh-home/animesh-home.component';
 import { AniketMenuComponent } from './components/aniket-menu/aniket-menu.component';
 import { AniketHomeComponent } from './components/aniket-home/aniket-home.component';
+import { AniketHeaderComponent } from './components/aniket-header/aniket-header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [AniketHomeComponent],
+  imports: [RouterOutlet, AniketHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

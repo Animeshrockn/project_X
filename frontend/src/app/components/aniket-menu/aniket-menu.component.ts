@@ -1,4 +1,6 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, OnInit, signal } from '@angular/core';
+import { MenuService } from '../../services/menu.service';
+import { MenuItem } from '../model/menu_items.type';
 
 @Component({
   selector: 'app-aniket-menu',
@@ -6,7 +8,10 @@ import { Component, input, signal } from '@angular/core';
   templateUrl: './aniket-menu.component.html',
   styleUrl: './aniket-menu.component.css'
 })
-export class AniketMenuComponent {
-  title = signal("Restaurant Menu")
-  message = input('Menu Items')
+export class AniketMenuComponent implements OnInit{
+    menuService = inject(MenuService);
+    menuItems = signal<Array<MenuItem>>([])
+    ngOnInit(): void {
+      this.menuItems.set(this.menuService.menuItems)
+    }
 }

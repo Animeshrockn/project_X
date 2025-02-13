@@ -5,14 +5,10 @@ import { AniketCounterComponent } from '../aniket-counter/aniket-counter.compone
 
 @Component({
   selector: 'app-aniket-home',
-  imports: [AniketMenuComponent, AniketCounterComponent],
+  imports: [],
   templateUrl: './aniket-home.component.html',
   styleUrl: './aniket-home.component.css'
 })
 export class AniketHomeComponent {
-  homeMessage = signal("Daal Makhni")
 
-  keyUpHandler(event: KeyboardEvent) {
-    console.log(`user pressed the ${event.key} key`)
-  }
 }
