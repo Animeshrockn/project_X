@@ -12,6 +12,10 @@ export class AniketMenuComponent implements OnInit{
     menuService = inject(MenuService);
     menuItems = signal<Array<MenuItem>>([])
     ngOnInit(): void {
-      this.menuItems.set(this.menuService.menuItems)
+      this.menuService.getMenuItems().then(data => {
+        this.menuItems.set(data);
+      }).catch(error => {
+        console.log('Error occured while fetching menu items: ', error)
+      })
     }
 }

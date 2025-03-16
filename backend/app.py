@@ -28,5 +28,38 @@ def add_data():
     collection.insert_one(data)
     return jsonify({"message": "Data added successfully!"}), 201
 
+@app.route('/api/menu_items', methods=['GET'])
+def get_menu_items():
+    # This data will go into the database
+    menuItems = [{
+        "itemId": 0,
+        "available": True,
+        "itemName": "Daal Makhni",
+        "itemDescription": "A Tasty blend of black lentils and Butter, A must have for family meals",
+        "cost": 19
+    },
+    {
+        "itemId": 1,
+        "available": True,
+        "itemName": "Chicken Vindaloo",
+        "itemDescription": "Known for its spicy and tangy flavor combination",
+        "cost": 20
+    },
+    {
+        "itemId": 2,
+        "available": True,
+        "itemName": "BURRATA",
+        "itemDescription": "roasted beets, shiso olive pesto, toasted hazelnut, pickled beets, sweet beet powder, basil oil, crispy roots, chinese donut",
+        "cost": 29
+    },
+    {
+        "itemId": 3,
+        "available": True,
+        "itemName": "Lachcha Paratha",
+        "itemDescription": "This legacy naan recipe from India whih is crunchy and soft at the same time",
+        "cost": 4
+    }
+    ]
+    return menuItems
 if __name__ == '__main__':
     app.run(debug=True)
