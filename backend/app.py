@@ -1,5 +1,6 @@
 
 
+import datetime
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from pymongo import MongoClient
@@ -13,6 +14,7 @@ CORS(app)
 client = MongoClient("mongodb+srv://Cluster16349:a1l0RVViYVNu@cluster16349.0gftb.mongodb.net/")
 db = client['nikita']
 collection = db['nikita_test']
+reservations_collection = db["animesh_reservations"]
 
 @app.route('/api/data', methods=['GET'])
 def get_data():
@@ -61,5 +63,25 @@ def get_menu_items():
     }
     ]
     return menuItems
+
+@app.route('/api/reservation', methods=['POST'])
+def create_reservation():
+    reservation_data = request.get_json()
+    reservation_data['created_at'] = datetime.datetime.now()
+    # Process the data (you can save it to the DB here)
+    try:
+        # Insert the reservation into the MongoDB collection
+        # print("reservertion data :", reservation_data)
+        reservations_collection.insert_one(reservation_data)
+        
+        return jsonify({
+            "message": "Reservation successfully saved!"
+        }), 201
+    except Exception as e:
+        return jsonify({
+            "message": "Error saving reservation.",
+            "error": str(e)
+        }), 500
+
 if __name__ == '__main__':
     app.run(debug=True)
