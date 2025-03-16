@@ -10,9 +10,9 @@ app = Flask(__name__)
 CORS(app)
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
-db = client.nikita
-collection = db.nikita_test
+client = MongoClient("mongodb+srv://Cluster16349:a1l0RVViYVNu@cluster16349.0gftb.mongodb.net/")
+db = client['nikita']
+collection = db['nikita_test']
 
 @app.route('/api/data', methods=['GET'])
 def get_data():

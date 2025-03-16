@@ -14,7 +14,10 @@ create a virtual env :
         python -m venv project_x
 
     Activate the Virtual Env : 
-        source project_x/Scripts/activate 
+        For Windows:
+            source project_x/Scripts/activate 
+        For MacOS:
+            source project_x/bin/activate
 
     Deactivate the Virtual Env : 
         deactivate 
@@ -55,4 +58,6 @@ move inside the folder :
         npm install axios
 
 Create a service to call Flask API :
-    
+
+
+
