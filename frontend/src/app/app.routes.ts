@@ -24,5 +24,29 @@ export const routes: Routes = [{
         loadComponent: () => {
             return import('./pages/nikita/nikita.component').then((m) => m.NikitaComponent);
         }
+    },
+    {
+        path: 'prod-a-aboutus',
+        loadComponent: () => {
+            return import('./components/prod-a-aboutus/prod-a-aboutus.component').then((m) => m.ProdAAboutusComponent);
+        }
+    },
+    {
+        path: 'prod-a-menu',
+        loadComponent: () => {
+            return import('./components/prod-a-menu/prod-a-menu.component').then((m) => m.ProdAMenuComponent);
+        }
+    },
+    {
+        path: 'prod-a-location',
+        loadComponent: () => {
+            return import('./components/prod-a-location/prod-a-location.component').then((m) => m.ProdALocationComponent);
+        }
+    },
+    {
+        path: 'prod-a-reservation',
+        loadComponent: () => {
+            return import('./components/prod-a-reservation/prod-a-reservation.component').then((m) => m.ProdAReservationComponent);
+        }
     }
 ];

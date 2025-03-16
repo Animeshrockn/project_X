@@ -58,4 +58,6 @@ move inside the folder :
         npm install axios
 
 Create a service to call Flask API :
-    
+
+
+
