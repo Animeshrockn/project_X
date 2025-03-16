@@ -19,7 +19,7 @@ reservations_collection = db["animesh_reservations"]
 @app.route('/api/data', methods=['GET'])
 def get_data():
     print("Hello")
-    data = list(collection.find())  # Exclude MongoDB _id
+    data = list(menu_items_collection.find())  # Exclude MongoDB _id
     document_json = json.dumps(data, default=json_util.default)
     print(data)
     return document_json
@@ -27,12 +27,13 @@ def get_data():
 @app.route('/api/data', methods=['POST'])
 def add_data():
     data = request.json
-    collection.insert_one(data)
+    menu_items_collection.insert_one(data)
     return jsonify({"message": "Data added successfully!"}), 201
 
 @app.route('/api/menu_items', methods=['GET'])
 def get_menu_items():
     # This data will go into the database
+
     menuItems = [{
         "itemId": 0,
         "available": True,
@@ -62,7 +63,9 @@ def get_menu_items():
         "cost": 4
     }
     ]
-    return menuItems
+    data = list(menu_items_collection.find())
+    menu_items = json.dumps(data, default=json_util.default)
+    return menu_items
 
 @app.route('/api/reservation', methods=['POST'])
 def create_reservation():
