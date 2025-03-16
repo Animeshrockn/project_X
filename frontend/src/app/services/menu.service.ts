@@ -1,38 +1,18 @@
 import { Injectable } from '@angular/core';
 import { MenuItem } from '../components/aniket-models/menu_items.type';
+import { firstValueFrom, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
-  menuItems: Array<MenuItem> = [{
-    itemId: 0,
-    available: true,
-    itemName: "Daal Makhni",
-    itemDescription: "A Tasty blend of black lentils and Butter, A must have for family meals",
-    cost: 19
-  },
-  {
-    itemId: 1,
-    available: true,
-    itemName: "Chicken Vindaloo",
-    itemDescription: "Known for its spicy and tangy flavor combination",
-    cost: 20
-  },
-  {
-    itemId: 2,
-    available: true,
-    itemName: "BURRATA",
-    itemDescription: "roasted beets, shiso olive pesto, toasted hazelnut, pickled beets, sweet beet powder, basil oil, crispy roots, chinese donut",
-    cost: 29
-  },
-  {
-    itemId: 3,
-    available: true,
-    itemName: "Lachcha Paratha",
-    itemDescription: "This legacy naan recipe from India whih is crunchy and soft at the same time",
-    cost: 4
+  private apiUrl = 'http://127.0.0.1:5000/api/menu_items'; // Replace with actual backend URL
+
+  constructor(private http: HttpClient) {}
+
+  // Fetch menu items from backend
+  getMenuItems(): Promise<MenuItem[]> {
+    return firstValueFrom(this.http.get<MenuItem[]>(this.apiUrl));
   }
-]
-  constructor() { }
 }
