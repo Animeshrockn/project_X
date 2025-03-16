@@ -1,0 +1,78 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Overall container styling */
+  .reservation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #b08cc7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  .reservation-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .reservation-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .form-group input:focus {
+    border-color: #3d85c6;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    padding: 12px 20px;
+    background-color: #165dcf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2766a1;
+  }
+  
+  .submit-btn:active {
+    background-color: #1e4d7f;
+  }
+  

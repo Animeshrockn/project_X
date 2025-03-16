@@ -1,0 +1,27 @@
+.location-container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.location-info {
+    margin-bottom: 30px;
+}
+
+.location-map {
+    margin-bottom: 30px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.location-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.location-hours li {
+    margin: 10px 0;
+}

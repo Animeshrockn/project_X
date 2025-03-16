@@ -1,2 +1,90 @@
-<app-prod-a-header />
-<p>prod-a-menu works!</p>
+<app-prod-a-header></app-prod-a-header>
+
+<div class="menu-container">
+    <h1>Our Menu</h1>
+    <p>Discover a selection of our finest dishes, crafted with fresh ingredients and culinary expertise.</p>
+
+    <!-- Appetizers Section -->
+    <section class="menu-section">
+        <h2>Appetizers</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="bruchetta.jpg" alt="Bruschetta">
+                <h3>Bruschetta</h3>
+                <p>Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+                <span class="price">$8.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="soup.jpg" alt="Soup of the Day">
+                <h3>Soup of the Day</h3>
+                <p>Freshly made soup with seasonal ingredients.</p>
+                <span class="price">$6.99</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Course Section -->
+    <section class="menu-section">
+        <h2>Main Course</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="steak.jpg" alt="Grilled Steak">
+                <h3>Grilled Steak</h3>
+                <p>Premium cut steak grilled to perfection with a side of roasted vegetables.</p>
+                <span class="price">$24.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="pasta-alfredo.jpg" alt="Pasta Alfredo">
+                <h3>Pasta Alfredo</h3>
+                <p>Classic fettuccine pasta in creamy Alfredo sauce with parmesan cheese.</p>
+                <span class="price">$15.99</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section class="menu-section">
+        <h2>Desserts</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="choco_lava_cake.jpg" alt="Chocolate Lava Cake">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Decadent chocolate cake with a gooey molten center.</p>
+                <span class="price">$7.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="ny_cheescake.jpg" alt="Cheesecake">
+                <h3>New York Cheesecake</h3>
+                <p>Creamy cheesecake with a buttery graham cracker crust.</p>
+                <span class="price">$8.99</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drinks Section -->
+    <section class="menu-section">
+        <h2>Drinks</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="mojito.jpg" alt="Mojito">
+                <h3>Mojito</h3>
+                <p>Refreshing blend of mint, lime, and sparkling water.</p>
+                <span class="price">$5.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and bold espresso shot, the perfect pick-me-up.</p>
+                <span class="price">$3.99</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-cta">
+        <h2>Ready to Order?</h2>
+        <p>Reserve your table now and enjoy a delightful meal at Tesla Restaurant.</p>
+        <!-- Button to Redirect to Reservation Page -->
+        <button [routerLink]="'/prod-a-reservation'" class="btn">Make a Reservation</button>
+    </div>
+    
+</div>
